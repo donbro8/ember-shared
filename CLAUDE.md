@@ -27,3 +27,13 @@ uv run pytest --cov
 - This package has zero internal Ember dependencies
 - Changes here affect all downstream repos — keep the API stable
 - Lint with ruff: `uv run ruff check src/ tests/`
+
+## Agent Routing (3 agents)
+
+| Role | Agent File | Tier Class | When to Use |
+|---|---|---|---|
+| module-architect | `.claude/agents/module-architect.md` | architect | Foundation API design, config patterns, backward compatibility |
+| implementer | `.claude/agents/implementer.md` | implementer | Settings, logging, model, error implementation |
+| reviewer | `.claude/agents/reviewer.md` | reviewer | Stability review, backward compatibility, API safety |
+
+Selection rule: SMA dispatches the appropriate agent based on task type. Module-architect for design tasks, implementer for coding tasks, reviewer for review tasks.
