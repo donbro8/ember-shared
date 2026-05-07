@@ -20,6 +20,9 @@ class Settings(BaseSettings):
     GCP_PROJECT_ID: str = "ember-bio-dev"
     GCP_REGION: str = "us-central1"
 
+    # Gemini API
+    GOOGLE_API_KEY: str = ""
+
     # Logging
     LOG_LEVEL: str = "INFO"
     LOG_JSON_FORMAT: bool = False
